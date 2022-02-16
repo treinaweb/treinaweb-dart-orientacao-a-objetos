@@ -1,6 +1,12 @@
 class Pessoa {
-  late String nome;
-  late int idade;
-  late String sexo;
-  late String email;
+  String nome;
+  int idade;
+  String sexo;
+  String email;
+
+  Pessoa(
+      {required this.nome,
+      required this.idade,
+      required this.sexo,
+      required this.email});
 }

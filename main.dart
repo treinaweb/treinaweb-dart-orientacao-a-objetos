@@ -23,16 +23,18 @@ void main(List<String> args) {
 }
 
 cadastrarCliente() {
-  var cliente = new Pessoa();
   print('escreva o nome do cliente');
-  cliente.nome = stdin.readLineSync()!;
-  print("escreva o email do ${cliente.nome}");
-  cliente.email = stdin.readLineSync()!;
-  print("escreva o sexo do ${cliente.nome}");
-  cliente.sexo = stdin.readLineSync()!;
-  print("escreva a idade do ${cliente.nome}");
-  cliente.idade = int.parse(stdin.readLineSync()!);
+  final nome = stdin.readLineSync()!;
+  print("escreva o email do cliente");
+  final email = stdin.readLineSync()!;
+  print("escreva o sexo do cliente");
+  final sexo = stdin.readLineSync()!;
+  print("escreva a idade do cliente");
+  final idade = int.parse(stdin.readLineSync()!);
   print("os dados cadastrados são");
+
+  var cliente = new Pessoa(nome: nome, email: email, idade: idade, sexo: sexo);
+
   print(cliente.nome);
   print(cliente.email);
   print(cliente.idade);
