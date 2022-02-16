@@ -9,4 +9,12 @@ class Pessoa {
       required this.idade,
       required this.sexo,
       required this.email});
+
+  Pessoa.construtorMasculino(
+      {required this.nome, required this.idade, required this.email})
+      : this.sexo = 'Masculino';
+
+  Pessoa.construtorFeminino(
+      {required this.nome, required this.idade, required this.email})
+      : this.sexo = 'Feminino';
 }
