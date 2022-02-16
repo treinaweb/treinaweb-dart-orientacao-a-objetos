@@ -1,20 +1,28 @@
 class Pessoa {
-  String nome;
-  int idade;
-  String sexo;
-  String email;
+  String _nome;
+  int _idade;
+  String _sexo;
+  String _email;
 
-  Pessoa(
-      {required this.nome,
-      required this.idade,
-      required this.sexo,
-      required this.email});
+  Pessoa({
+    required nome,
+    required idade,
+    required sexo,
+    required email,
+  })  : this._nome = nome,
+        this._idade = idade,
+        this._sexo = sexo,
+        this._email = email;
 
-  Pessoa.construtorMasculino(
-      {required this.nome, required this.idade, required this.email})
-      : this.sexo = 'Masculino';
+  Pessoa.construtorMasculino({required nome, required idade, required email})
+      : this._sexo = 'Masculino',
+        this._nome = nome,
+        this._idade = idade,
+        this._email = email;
 
-  Pessoa.construtorFeminino(
-      {required this.nome, required this.idade, required this.email})
-      : this.sexo = 'Feminino';
+  Pessoa.construtorFeminino({required nome, required idade, required email})
+      : this._sexo = 'Feminino',
+        this._nome = nome,
+        this._idade = idade,
+        this._email = email;
 }
