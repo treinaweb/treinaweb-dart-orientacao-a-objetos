@@ -57,4 +57,13 @@ class Pessoa {
   void set email(String email) {
     this._email = email;
   }
+
+  int fazerAniversario() {
+    this._idade++;
+    return this._idade;
+  }
+
+  void adicionarSobrenome(String sobrenome) {
+    this._nome = "${this._nome} $sobrenome";
+  }
 }

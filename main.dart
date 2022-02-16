@@ -39,6 +39,8 @@ cadastrarClienteMasculino() {
   var cliente =
       new Pessoa.construtorMasculino(nome: nome, email: email, idade: idade);
 
+  cliente.fazerAniversario();
+  cliente.adicionarSobrenome('Sardinha');
   print(cliente.nome);
   print(cliente.email);
   print(cliente.idade);
