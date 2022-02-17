@@ -2,8 +2,7 @@ import 'pessoa.dart';
 
 class Cliente extends Pessoa {
   bool ativo;
-  String nome;
-  String idade;
+
   Cliente(
       {required String nome,
       required int idade,
