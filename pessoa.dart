@@ -26,42 +26,23 @@ class Pessoa {
         this._idade = idade,
         this._email = email;
 
-  String get nome {
-    return this._nome;
-  }
+  String get nome => this._nome;
 
-  int get idade {
-    return this._idade;
-  }
+  int get idade => this._idade;
 
-  String get sexo {
-    return this._sexo;
-  }
+  String get sexo => this._sexo;
 
-  String get email {
-    return this._email;
-  }
+  String get email => this._email;
 
-  void set nome(String nome) {
-    this._nome = nome;
-  }
+  void set nome(String nome) => this._nome = nome;
 
-  void set idade(int idade) {
-    this._idade = idade;
-  }
+  void set idade(int idade) => this._idade = idade;
 
-  void set sexo(String sexo) {
-    this._sexo = sexo;
-  }
+  void set sexo(String sexo) => this._sexo = sexo;
 
-  void set email(String email) {
-    this._email = email;
-  }
+  void set email(String email) => this._email = email;
 
-  int fazerAniversario() {
-    this._idade++;
-    return this._idade;
-  }
+  int fazerAniversario() => ++this._idade;
 
   void adicionarSobrenome(String sobrenome) {
     this._nome = "${this._nome} $sobrenome";
