@@ -3,6 +3,7 @@ import 'dart:math';
 import 'cliente.dart';
 import 'pessoa.dart';
 
+List listaCliente = [];
 void main(List<String> args) {
   var opcao;
   do {
@@ -25,7 +26,7 @@ void main(List<String> args) {
         break;
       default:
     }
-  } while (opcao != 3);
+  } while (opcao != 4);
 }
 
 cadastrarClienteMasculino() {
@@ -38,14 +39,13 @@ cadastrarClienteMasculino() {
   print("os dados cadastrados são");
 
   var cliente = new Cliente.masculino(
-      nome: nome, email: email, idade: idade, ativo: true);
+      nome: nome, email: email, idade: idade, status: true);
+
+  listaCliente.add(cliente);
 
   cliente.adicionarSobrenome('Sardinha');
-  print(cliente.nome);
-  print(cliente.email);
-  print(cliente.idade);
-  print(cliente.sexo);
-  print(cliente.ativo);
+
+  print(cliente.toString());
 }
 
 cadastrarClienteFeminino() {
@@ -57,14 +57,20 @@ cadastrarClienteFeminino() {
   final idade = int.parse(stdin.readLineSync()!);
   print("os dados cadastrados são");
 
-  var cliente =
-      new Cliente.feminino(nome: nome, email: email, idade: idade, ativo: true);
+  var cliente = new Cliente.feminino(
+      nome: nome, email: email, idade: idade, status: true);
+  listaCliente.add(cliente);
 
   print(cliente.nome);
   print(cliente.email);
   print(cliente.idade);
   print(cliente.sexo);
-  print(cliente.ativo);
+  print(cliente.status);
 }
 
-listarCliente() {}
+listarCliente() {
+  print("A lista de clientes é:");
+  print(listaCliente.map((cleinte) {
+    return cleinte.nome;
+  }));
+}

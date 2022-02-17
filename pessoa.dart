@@ -47,4 +47,9 @@ class Pessoa {
   void adicionarSobrenome(String sobrenome) {
     this._nome = "${this._nome} $sobrenome";
   }
+
+  String toString() {
+    return "A pessoa de nome ${this._nome} possui ${this._idade} anos " +
+        " com sexo ${this._sexo} e email ${this._email}";
+  }
 }
