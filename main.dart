@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'dart:math';
+import 'cliente.dart';
 import 'pessoa.dart';
 
 void main(List<String> args) {
@@ -36,14 +37,15 @@ cadastrarClienteMasculino() {
   final idade = int.parse(stdin.readLineSync()!);
   print("os dados cadastrados são");
 
-  var cliente =
-      new Pessoa.construtorMasculino(nome: nome, email: email, idade: idade);
+  var cliente = new Cliente.masculino(
+      nome: nome, email: email, idade: idade, ativo: true);
 
   cliente.adicionarSobrenome('Sardinha');
   print(cliente.nome);
   print(cliente.email);
   print(cliente.idade);
   print(cliente.sexo);
+  print(cliente.ativo);
 }
 
 cadastrarClienteFeminino() {
@@ -56,12 +58,13 @@ cadastrarClienteFeminino() {
   print("os dados cadastrados são");
 
   var cliente =
-      new Pessoa.construtorFeminino(nome: nome, email: email, idade: idade);
+      new Cliente.feminino(nome: nome, email: email, idade: idade, ativo: true);
 
   print(cliente.nome);
   print(cliente.email);
   print(cliente.idade);
   print(cliente.sexo);
+  print(cliente.ativo);
 }
 
 listarCliente() {}
