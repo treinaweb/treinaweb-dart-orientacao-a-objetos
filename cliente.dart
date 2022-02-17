@@ -33,4 +33,9 @@ class Cliente extends Pessoa {
     return "O cliente de nome ${this.nome} possui ${this.idade} anos " +
         "com sexo ${this.sexo} email ${this.email} e status ${this.status}";
   }
+
+  @override
+  void chave() {
+    this.status = false;
+  }
 }

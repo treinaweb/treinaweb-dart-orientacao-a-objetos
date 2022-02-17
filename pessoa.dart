@@ -1,4 +1,4 @@
-class Pessoa {
+abstract class Pessoa {
   String _nome;
   int _idade;
   String _sexo;
@@ -47,6 +47,8 @@ class Pessoa {
   void adicionarSobrenome(String sobrenome) {
     this._nome = "${this._nome} $sobrenome";
   }
+
+  void chave();
 
   String toString() {
     return "A pessoa de nome ${this._nome} possui ${this._idade} anos " +
