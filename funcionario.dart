@@ -9,9 +9,4 @@ class Funcionario extends Pessoa {
     String email,
   )   : this.status = true,
         super(nome: nome, idade: idade, sexo: sexo, email: email);
-
-  @override
-  void desativar() {
-    this.status = false;
-  }
 }

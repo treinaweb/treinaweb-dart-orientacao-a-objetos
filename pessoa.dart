@@ -42,8 +42,6 @@ abstract class Pessoa {
 
   void set email(String email) => this._email = email;
 
-  void desativar();
-
   int fazerAniversario() => ++this._idade;
 
   void adicionarSobrenome(String sobrenome) {

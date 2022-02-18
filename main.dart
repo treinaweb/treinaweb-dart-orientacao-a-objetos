@@ -39,10 +39,6 @@ cadastrarClienteMasculino() {
   var cliente = new Cliente.masculino(
       nome: nome, email: email, idade: idade, status: true);
 
-  print(cliente.status);
-  cliente.desativar();
-  print(cliente.status);
-
   listaCliente.add(cliente);
 
   cliente.adicionarSobrenome('Sardinha');
