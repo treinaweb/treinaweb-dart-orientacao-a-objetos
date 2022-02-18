@@ -1,7 +1,9 @@
 import 'dart:io';
 import 'cliente.dart';
+import 'repositorio_cliente.dart';
 
-List listaCliente = [];
+var repositorioCliente = new RepositorioCliente();
+
 void main(List<String> args) {
   var opcao;
   do {
@@ -20,7 +22,7 @@ void main(List<String> args) {
         cadastrarClienteFeminino();
         break;
       case 3:
-        listarCliente();
+        repositorioCliente.listar();
         break;
       default:
     }
@@ -43,7 +45,7 @@ cadastrarClienteMasculino() {
   cliente.desativar();
   print(cliente.status);
 
-  listaCliente.add(cliente);
+  repositorioCliente.cadastrar(cliente);
 
   cliente.adicionarSobrenome('Sardinha');
 
@@ -61,18 +63,12 @@ cadastrarClienteFeminino() {
 
   var cliente = new Cliente.feminino(
       nome: nome, email: email, idade: idade, status: "está na loja");
-  listaCliente.add(cliente);
+
+  repositorioCliente.cadastrar(cliente);
 
   print(cliente.nome);
   print(cliente.email);
   print(cliente.idade);
   print(cliente.sexo);
   print(cliente.status);
-}
-
-listarCliente() {
-  print("A lista de clientes é:");
-  print(listaCliente.map((cleinte) {
-    return cleinte.nome;
-  }));
 }

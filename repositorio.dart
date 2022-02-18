@@ -1,6 +1,6 @@
 abstract class Repositorio {
-  abstract String nome;
-  void cadastrar();
+  abstract List listaClientes;
+  void cadastrar(var cliente);
 
   void listar();
 }
