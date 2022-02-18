@@ -1,6 +1,8 @@
 import 'dart:io';
-import 'cliente.dart';
-import 'repositorio_cliente.dart';
+import 'classes/cliente.dart';
+import 'classes/fornecedor.dart';
+import 'classes/funcionario.dart';
+import 'classes/repositorio_cliente.dart';
 
 var repositorioCliente = new RepositorioCliente();
 
@@ -40,14 +42,16 @@ cadastrarClienteMasculino() {
 
   var cliente = new Cliente.masculino(
       nome: nome, email: email, idade: idade, status: "está na loja");
+  var fornecedor = new Fornecedor(nome, idade, 'masculino', email);
 
-  print(cliente.status);
-  cliente.desativar();
-  print(cliente.status);
+  var funcionario = new Funcionario(nome, idade, 'masculino', email);
+
+  fornecedor.abastecer();
+  fornecedor.comprar("chocolate");
+  funcionario.abastecer();
+  cliente.comprar("bombom");
 
   repositorioCliente.cadastrar(cliente);
-
-  cliente.adicionarSobrenome('Sardinha');
 
   print(cliente.toString());
 }

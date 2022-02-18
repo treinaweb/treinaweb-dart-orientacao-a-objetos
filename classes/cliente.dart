@@ -1,6 +1,7 @@
-import 'pessoa.dart';
+import '../classe_abstrata/pessoa.dart';
+import '../mixins/comprar.dart';
 
-class Cliente extends Pessoa {
+class Cliente extends Pessoa with Comprar {
   String status;
 
   Cliente(

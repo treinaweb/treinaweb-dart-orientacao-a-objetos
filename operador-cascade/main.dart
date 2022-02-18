@@ -1,4 +1,4 @@
-import '../pessoa.dart';
+import '../classe_abstrata/pessoa.dart';
 
 void main(List<String> args) {
   var cliente = new Pessoa();

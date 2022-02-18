@@ -1,6 +1,7 @@
-import 'pessoa.dart';
+import '../classe_abstrata/pessoa.dart';
+import '../mixins/abastecer.dart';
 
-class Funcionario extends Pessoa {
+class Funcionario extends Pessoa with Abastecer {
   String status;
   Funcionario(
     String nome,

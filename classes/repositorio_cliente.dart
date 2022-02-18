@@ -1,5 +1,5 @@
-import 'pessoa.dart';
-import 'repositorio.dart';
+import '../classe_abstrata/pessoa.dart';
+import '../interface/repositorio.dart';
 
 class RepositorioCliente implements Repositorio {
   @override
