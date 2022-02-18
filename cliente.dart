@@ -1,14 +1,14 @@
 import 'pessoa.dart';
 
 class Cliente extends Pessoa {
-  bool status;
+  String status;
 
   Cliente(
       {required String nome,
       required int idade,
       required String sexo,
       required String email,
-      required bool status})
+      required String status})
       : this.status = status,
         super(nome: nome, idade: idade, sexo: sexo, email: email);
 
@@ -16,7 +16,7 @@ class Cliente extends Pessoa {
       {required String nome,
       required int idade,
       required String email,
-      required bool status})
+      required String status})
       : this.status = status,
         super.construtorMasculino(nome: nome, idade: idade, email: email);
 
@@ -24,7 +24,7 @@ class Cliente extends Pessoa {
       {required String nome,
       required int idade,
       required String email,
-      required bool status})
+      required String status})
       : this.status = status,
         super.construtorFeminino(nome: nome, idade: idade, email: email);
 
@@ -32,5 +32,10 @@ class Cliente extends Pessoa {
   String toString() {
     return "O cliente de nome ${this.nome} possui ${this.idade} anos " +
         "com sexo ${this.sexo} email ${this.email} e status ${this.status}";
+  }
+
+  @override
+  void desativar() {
+    this.status = "não está na loja";
   }
 }

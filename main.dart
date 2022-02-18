@@ -37,7 +37,11 @@ cadastrarClienteMasculino() {
   print("os dados cadastrados são");
 
   var cliente = new Cliente.masculino(
-      nome: nome, email: email, idade: idade, status: true);
+      nome: nome, email: email, idade: idade, status: "está na loja");
+
+  print(cliente.status);
+  cliente.desativar();
+  print(cliente.status);
 
   listaCliente.add(cliente);
 
@@ -56,7 +60,7 @@ cadastrarClienteFeminino() {
   print("os dados cadastrados são");
 
   var cliente = new Cliente.feminino(
-      nome: nome, email: email, idade: idade, status: true);
+      nome: nome, email: email, idade: idade, status: "está na loja");
   listaCliente.add(cliente);
 
   print(cliente.nome);

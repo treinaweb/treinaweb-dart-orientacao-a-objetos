@@ -1,12 +1,17 @@
 import 'pessoa.dart';
 
 class Funcionario extends Pessoa {
-  bool status;
+  String status;
   Funcionario(
     String nome,
     int idade,
     String sexo,
     String email,
-  )   : this.status = true,
+  )   : this.status = "empregado",
         super(nome: nome, idade: idade, sexo: sexo, email: email);
+
+  @override
+  void desativar() {
+    this.status = "desempregado";
+  }
 }
