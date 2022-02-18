@@ -1,7 +1,5 @@
 import 'dart:io';
-import 'dart:math';
 import 'cliente.dart';
-import 'pessoa.dart';
 
 List listaCliente = [];
 void main(List<String> args) {

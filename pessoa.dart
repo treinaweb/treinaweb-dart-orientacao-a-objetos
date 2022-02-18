@@ -48,8 +48,6 @@ abstract class Pessoa {
     this._nome = "${this._nome} $sobrenome";
   }
 
-  void chave();
-
   String toString() {
     return "A pessoa de nome ${this._nome} possui ${this._idade} anos " +
         " com sexo ${this._sexo} e email ${this._email}";
