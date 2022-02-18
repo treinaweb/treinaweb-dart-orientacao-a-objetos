@@ -38,4 +38,9 @@ class Cliente extends Pessoa {
   void chave() {
     this.status = false;
   }
+
+  @override
+  void desativar() {
+    this.status = false;
+  }
 }
